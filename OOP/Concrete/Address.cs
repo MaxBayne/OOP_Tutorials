@@ -1,14 +1,41 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace OOP.Models
+﻿namespace OOP.Models
 {
     public class Address
     {
-        public string StreetNo { get; set; }
-        public string  CityName { get; set; }
-        public string CountryName { get; set; }
-        public string BuildingNo { get; set; }
+        public Address() { }
+        public Address(string country,string city,string street,string building)
+        {
+            CountryName=country;
+            CityName=city;
+            StreetNo=street;
+            BuildingNo=building;
+        }
+
+        #region Encapsulation
+
+        public string StreetNo { get; private set; }
+        public string CityName { get; private set; }
+        public string CountryName { get; private set; }
+        public string BuildingNo { get; private set; }
+
+
+        public void ChangeCountry(string country)
+        {
+            CountryName = country;
+        }
+        public void ChangeCity(string city)
+        {
+            CityName = city;
+        }
+        public void ChangeStreet(string street)
+        {
+            StreetNo = street;
+        }
+        public void changeBuilding(string building)
+        {
+            BuildingNo = building;
+        }
+
+        #endregion
     }
 }
