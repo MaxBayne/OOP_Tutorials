@@ -1,5 +1,7 @@
 ﻿using System;
 using OOP.Abstract.Interfaces;
+using OOP.C_Polymorphism.Base;
+using OOP.C_Polymorphism.Conceret;
 using OOP.Concrete;
 
 
@@ -79,29 +81,33 @@ namespace OOP
 
             /*
              * - Polymorphism With interface and Inheritance 
-             * - IPerson Interface or Person Class  = can store Boy or Girl
+             * - Polymorphism using overloading
+             * - Polymorphism using overRiding
+             
              */
             Console.WriteLine("");
             Console.WriteLine("===========================================");
             Console.WriteLine("--------------- Polymorphism ---------------");
             Console.WriteLine("===========================================");
 
+            //Polymorphism With Interfaces
 
-            //IPerson boy = new Boy("Ahmed");
-            //Person girl = new Girl("Aya");
-
-            //Console.WriteLine(boy.Name);
-            //Console.WriteLine(girl.Name);
-
+            IEmployee mainEmp = new MainEmployee("Mohammed","Salah",5000,100,50);
+            IEmployee tempEmp = new TempEmployee("Mahmoud", "Khalid", 2000, 240, 70);
 
             //Polymorphism With Overloading
 
-            /*
-            Boy boy5 = new Boy("Mido");
+            var emp = new MainEmployee("Mohammed", "Salah", 5000, 100, 50);
 
-            boy5.Eat();
-            boy5.Eat("Mango");
-            */
+            var netSalary = emp.CalculateNetSalary();
+            var netSalaryWithTax = emp.CalculateNetSalary(14);
+
+            Console.WriteLine($"Net Salary = {netSalary}");
+            Console.WriteLine($"Net Salary With Tax = {netSalaryWithTax}");
+
+            //Polymorphism With Overriding
+
+            Console.WriteLine(emp.GetInfo());
 
             //#################################################
             //Abstraction (UnImplement) ---------------------
