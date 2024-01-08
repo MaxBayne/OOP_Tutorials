@@ -1,5 +1,7 @@
 ﻿using System;
+using OOP.Abstract.Bases;
 using OOP.Abstract.Interfaces;
+using OOP.Concrete;
 using OOP.Models;
 
 namespace OOP
@@ -8,11 +10,35 @@ namespace OOP
     {
         static void Main(string[] args)
         {
+
+            //OOP Concepts
+            //------------
+            /*
+             * - Encapsulation
+             * - Inheritance
+             * - Abstraction
+             * - Polymorphism
+             */
+
+
+
             //#################################################
-            //Attributes ---------------------
+            //Encapsulation ---------------------
             //#################################################
 
-            //Car bmw = new Car();
+            /*
+             * - mean hide any details for class inside methods and dont make anybody can change that details 
+             * - protect class from being changed its data and make class in invalid state mean use methods to alter attributes and make validation on it
+             * - u can use methods for alter attributes and access modifiers for hiding details
+            */
+
+            //here i cant alter any attributes directlly just using methods
+
+            Car car = new Car();
+
+            car.ChangeSpeed(1000);
+            car.ChangeColor("Red");
+            car.ChangeModel("SUV");
 
             //#################################################
             //Inheritance ---------------------
@@ -84,13 +110,13 @@ namespace OOP
             //Polymorphism With interface and Inheritance
             //IPerson Interface or Person Class  = can store Boy or Girl
 
-            /*
+
             IPerson boy = new Boy("Ahmed");
             Person girl = new Girl("Aya");
 
             Console.WriteLine(boy.Name);
             Console.WriteLine(girl.Name);
-            */
+            
 
             //Polymorphism With Overloading
 
