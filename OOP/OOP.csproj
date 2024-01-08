@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="D-Abstraction\Interfaces\" />
     <Folder Include="C-Polymorphism\" />
   </ItemGroup>
 

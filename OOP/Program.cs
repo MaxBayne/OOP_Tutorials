@@ -1,5 +1,4 @@
 ﻿using System;
-using OOP.Abstract.Bases;
 using OOP.Abstract.Interfaces;
 using OOP.Concrete;
 
@@ -32,6 +31,10 @@ namespace OOP
              * - u can use methods for alter attributes and access modifiers for hiding details
             */
 
+            Console.WriteLine("===========================================");
+            Console.WriteLine("-------------- Encapsulation --------------");
+            Console.WriteLine("===========================================");
+
             //here i cant alter any attributes directlly just using methods
 
             Car car = new Car();
@@ -40,51 +43,79 @@ namespace OOP
             car.ChangeColor("Red");
             car.ChangeModel("SUV");
 
+            Console.WriteLine(car);
+
             //#################################################
             //Inheritance ---------------------
             //#################################################
 
-            //(Is-A) => Ahmed Is A Person , BMW is A Car
-            //Inheritance Is Relation Between Class and Class
+            /*
+             * (Is-A) => Ahmed Is A Person , BMW is A Car
+             * Inheritance Is Relation Between Class and Class
+            */
+            Console.WriteLine("");
+            Console.WriteLine("===========================================");
+            Console.WriteLine("--------------- Inheritance ---------------");
+            Console.WriteLine("===========================================");
 
-            //Boy boy = new Boy();
+            Person boy = new Boy();
+            Person girl = new Girl();
 
-            //boy.Name = "Ahmed";
-            //boy.Email = "Ahmed@gmail.com";
-            //boy.Age = 22;
+            boy.SetName("Ahmed");
+            boy.SetEmail("Ahmed@gmail.com");
+            boy.SetAge(22);
 
-            //Console.WriteLine(boy.Name);
+            girl.SetName("Mona");
+            girl.SetEmail("Mona@gmail.com");
+            girl.SetAge(20);
 
-            ///////
+            Console.WriteLine(boy);
+            Console.WriteLine(girl);
 
-            //Boy boy1 = new Boy("Max Bayne");
-
-            //Console.WriteLine(boy1.Name);
-
-            ///////
-
-            //Boy boy2 = new Boy("Eng.Mohammed Salah","mohammed.salah@gmail.com",25);
-
-            //Console.WriteLine(boy2.Name);
 
             //#################################################
-            //Composition --------------------- (Has-A) => Car Has A Person , Person Has A Watch
+            //Polymorphism ---------------------
             //#################################################
-
-            //Composition is Relation Between Object and Object
 
             /*
-            Boy boy3 = new Boy("Composition");
-            boy3.Address.CountryName = "Egypt";
+             * - Polymorphism With interface and Inheritance 
+             * - IPerson Interface or Person Class  = can store Boy or Girl
+             */
+            Console.WriteLine("");
+            Console.WriteLine("===========================================");
+            Console.WriteLine("--------------- Polymorphism ---------------");
+            Console.WriteLine("===========================================");
 
-            Console.WriteLine($"Boy name is {boy3.Name} , has address in {boy3.Address.CountryName}");
+
+            //IPerson boy = new Boy("Ahmed");
+            //Person girl = new Girl("Aya");
+
+            //Console.WriteLine(boy.Name);
+            //Console.WriteLine(girl.Name);
+
+
+            //Polymorphism With Overloading
+
+            /*
+            Boy boy5 = new Boy("Mido");
+
+            boy5.Eat();
+            boy5.Eat("Mango");
             */
 
             //#################################################
             //Abstraction (UnImplement) ---------------------
             //#################################################
 
-            //Hide Implementation By using Interfaces
+            /*
+             * - Hide Implementation By using Interfaces
+             */
+            Console.WriteLine("");
+            Console.WriteLine("===========================================");
+            Console.WriteLine("--------------- Abstraction ---------------");
+            Console.WriteLine("===========================================");
+
+
 
             /*
             IPerson boy = new Boy("Mohammed");
@@ -103,29 +134,7 @@ namespace OOP
             girl4.Walk();
             */
 
-            //#################################################
-            //Polymorphism ---------------------
-            //#################################################
 
-            //Polymorphism With interface and Inheritance
-            //IPerson Interface or Person Class  = can store Boy or Girl
-
-
-            IPerson boy = new Boy("Ahmed");
-            Person girl = new Girl("Aya");
-
-            Console.WriteLine(boy.Name);
-            Console.WriteLine(girl.Name);
-            
-
-            //Polymorphism With Overloading
-
-            /*
-            Boy boy5 = new Boy("Mido");
-
-            boy5.Eat();
-            boy5.Eat("Mango");
-            */
         }
     }
 }

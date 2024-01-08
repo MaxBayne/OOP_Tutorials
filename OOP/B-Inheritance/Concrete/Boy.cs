@@ -1,5 +1,4 @@
 ﻿using System;
-using OOP.Abstract.Bases;
 
 namespace OOP.Concrete
 {

@@ -47,5 +47,10 @@ public class Car
     {
 
     }
+
+    public override string ToString()
+    {
+        return $"Speed={Speed},Model={Model},Color={Color}";
+    }
 }
 
