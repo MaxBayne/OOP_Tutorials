@@ -1,6 +1,6 @@
 ﻿using System;
 using OOP.Abstract.Interfaces;
-using OOP.Models;
+
 
 namespace OOP.Abstract.Bases
 {

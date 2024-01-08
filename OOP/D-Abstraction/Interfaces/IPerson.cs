@@ -1,5 +1,4 @@
-﻿using OOP.Models;
-
+﻿
 namespace OOP.Abstract.Interfaces
 {
     public interface IPerson

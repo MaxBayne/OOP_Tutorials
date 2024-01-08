@@ -1,6 +1,5 @@
 ﻿using System;
 using OOP.Abstract.Bases;
-using OOP.Models;
 
 namespace OOP.Concrete
 {

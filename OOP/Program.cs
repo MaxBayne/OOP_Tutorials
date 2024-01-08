@@ -2,7 +2,7 @@
 using OOP.Abstract.Bases;
 using OOP.Abstract.Interfaces;
 using OOP.Concrete;
-using OOP.Models;
+
 
 namespace OOP
 {
@@ -16,8 +16,8 @@ namespace OOP
             /*
              * - Encapsulation
              * - Inheritance
-             * - Abstraction
              * - Polymorphism
+             * - Abstraction
              */
 
 
