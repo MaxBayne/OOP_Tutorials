@@ -1,8 +1,10 @@
 ﻿using System;
-using OOP.Abstract.Interfaces;
 using OOP.C_Polymorphism.Base;
 using OOP.C_Polymorphism.Conceret;
 using OOP.Concrete;
+using OOP.D_Abstraction.Conceret;
+using OOP.D_Abstraction.Interfaces;
+
 
 
 namespace OOP
@@ -83,8 +85,8 @@ namespace OOP
              * - Polymorphism With interface and Inheritance 
              * - Polymorphism using overloading
              * - Polymorphism using overRiding
-             
              */
+
             Console.WriteLine("");
             Console.WriteLine("===========================================");
             Console.WriteLine("--------------- Polymorphism ---------------");
@@ -92,53 +94,43 @@ namespace OOP
 
             //Polymorphism With Interfaces
 
-            IEmployee mainEmp = new MainEmployee("Mohammed","Salah",5000,100,50);
-            IEmployee tempEmp = new TempEmployee("Mahmoud", "Khalid", 2000, 240, 70);
+            ITeacher mainTeacher = new MainTeacher("Mohammed","Salah",5000,100,50);
+            ITeacher tempTeacher = new TempTeacher("Mahmoud", "Khalid", 2000, 240, 70);
 
             //Polymorphism With Overloading
 
-            var emp = new MainEmployee("Mohammed", "Salah", 5000, 100, 50);
+            var teacher = new MainTeacher("Mohammed", "Salah", 5000, 100, 50);
 
-            var netSalary = emp.CalculateNetSalary();
-            var netSalaryWithTax = emp.CalculateNetSalary(14);
+            var netSalary = teacher.CalculateNetSalary();
+            var netSalaryWithTax = teacher.CalculateNetSalary(14);
 
             Console.WriteLine($"Net Salary = {netSalary}");
             Console.WriteLine($"Net Salary With Tax = {netSalaryWithTax}");
 
             //Polymorphism With Overriding
 
-            Console.WriteLine(emp.GetInfo());
+            Console.WriteLine(teacher.GetInfo());
 
             //#################################################
             //Abstraction (UnImplement) ---------------------
             //#################################################
 
             /*
-             * - Hide Implementation By using Interfaces
+             * - Hide Implementation and Details for class
+             * - Abstraction using Abstract Method
+             * - Abstraction using Abstract Class
+             * - Abstraction using interfaces
              */
+
             Console.WriteLine("");
             Console.WriteLine("===========================================");
             Console.WriteLine("--------------- Abstraction ---------------");
             Console.WriteLine("===========================================");
 
+            IEmployee employee = new MainEmployee("mohammed","salah",5000,500,300);
 
+            Console.WriteLine(employee);
 
-            /*
-            IPerson boy = new Boy("Mohammed");
-            IPerson girl = new Girl("Mona");
-
-            Console.WriteLine(boy.Name);
-            Console.WriteLine(girl.Name);
-            */
-
-            //Hide Implementation By Using Abstract Classes
-            /*
-            Boy boy4 = new Boy("Ahmed");
-            Girl girl4 = new Girl("Mona");
-
-            boy4.Walk();
-            girl4.Walk();
-            */
 
 
         }

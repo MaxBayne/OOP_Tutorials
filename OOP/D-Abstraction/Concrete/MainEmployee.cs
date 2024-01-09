@@ -1,27 +1,22 @@
-﻿using OOP.C_Polymorphism.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using OOP.D_Abstraction.Base;
 
-namespace OOP.C_Polymorphism.Conceret
+namespace OOP.D_Abstraction.Conceret
 {
-    internal class MainEmployee : Employee
+    public class MainEmployee : Employee
     {
         public MainEmployee(string firstName, string lastName, double basicSalary, double addons, double subs) : base(firstName, lastName, basicSalary, addons, subs)
         {
         }
 
 
-        #region Polymorphism With Overridding
+        #region Abstraction By Abstract Method
         public override string GetInfo()
         {
             return $"Main Employee {FirstName} {LastName}";
         }
         #endregion
 
-        #region Polymorphism With Overloading
+        #region Abstraction By Encapsulation
 
         public double CalculateNetSalary(double taxPercent)
         {

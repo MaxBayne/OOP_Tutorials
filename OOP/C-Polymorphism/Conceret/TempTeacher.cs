@@ -1,15 +1,10 @@
 ﻿using OOP.C_Polymorphism.Base;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace OOP.C_Polymorphism.Conceret
 {
-    internal class TempEmployee : Employee
+    internal class TempTeacher : Teacher
     {
-        public TempEmployee(string firstName, string lastName, double basicSalary, double addons, double subs) : base(firstName, lastName, basicSalary, addons, subs)
+        public TempTeacher(string firstName, string lastName, double basicSalary, double addons, double subs) : base(firstName, lastName, basicSalary, addons, subs)
         {
         }
         #region Polymorphism With Overridding

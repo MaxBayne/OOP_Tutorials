@@ -1,9 +1,9 @@
 ﻿using System;
-using OOP.Abstract.Interfaces;
 
 
 
-public abstract class Person : IPerson
+
+public abstract class Person
 {
     #region Attributes
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace OOP.C_Polymorphism.Base
 {
-    public interface IEmployee
+    public interface ITeacher
     {
         string FirstName { get; }
         string LastName { get; }
@@ -18,10 +18,8 @@ namespace OOP.C_Polymorphism.Base
         string GetInfo();
     }
 
-
-
     //Base/Super Class
-    public abstract class Employee : IEmployee
+    public abstract class Teacher : ITeacher
     {
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
@@ -30,7 +28,7 @@ namespace OOP.C_Polymorphism.Base
         public double AddOns { get; private set; }
         public double Subtracts { get; private set; }
 
-        public Employee(string firstName,string lastName,double basicSalary,double addons,double subs)
+        public Teacher(string firstName, string lastName, double basicSalary, double addons, double subs)
         {
             FirstName = firstName;
             LastName = lastName;
